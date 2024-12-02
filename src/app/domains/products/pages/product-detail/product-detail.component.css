@@ -1,0 +1,6 @@
+
+.selectImg {
+    border: 5px solid rgb(227, 57, 34);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajusta los valores según tu preferencia */
+    transition: all 0.3s ease; /* Agrega una transición para que el cambio sea suave */
+}
