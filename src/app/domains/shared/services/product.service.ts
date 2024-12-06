@@ -14,8 +14,13 @@ export class ProductService {
 
   private http = inject(HttpClient);
 
-  getProducts(){
-    return this.http.get<Product[]>(this.url);
+  getProducts(category_id?:string){
+    const url1 = new URL(this.url);//objeto URL ESTABLECE QUERYPARAMS
+    if (category_id) {
+      url1.searchParams.set('categoryId',category_id)
+    }
+    return this.http.get<Product[]>(url1.toString());
+    
   }
 
   getProduct(id:any){
